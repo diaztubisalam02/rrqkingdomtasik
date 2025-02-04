@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pendaftaran Anggota RRQ Kingdom</title>
+    <link rel="icon" href="assets/logorrq.png" type="image/png">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" type="text/css" href="pendaftaran.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Pendaftaran Anggota RRQ Kingdom</h1>
+        <form action="proses_daftar.html" method="post">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="tanggal_lahir">Tanggal Lahir:</label>
+            <input type="date" id="tanggal_lahir" name="tanggal_lahir" required>
+            <label for="jenis_kelamin">Jenis Kelamin:</label>
+            <label for="laki_laki"><input type="radio" id="laki_laki" name="jenis_kelamin" value="Laki-laki" required>Laki-laki</label>
+            <label for="perempuan"><input type="radio" id="perempuan" name="jenis_kelamin" value="Perempuan" required>Perempuan</label>
+            <label for="alamat">Alamat:</label>
+            <textarea id="alamat" name="alamat" required></textarea>
+
+            <input type="submit" value="Daftar">
+        </form>
+        <br>
+
+        <form action="index.html" method="get">
+            <input type="submit" value="Home">
+        </form>
+    </div>  
+    
+    <script>
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, save it!"
+          }).then((result) => {
+            if (result.isConfirmed) {
+              Swal.fire({
+                title: "Saved!",
+                text: "Your file has been Saved.",
+                icon: "success"
+              });
+            }
+          });
+    </script>
+</body>
+
+</html>
